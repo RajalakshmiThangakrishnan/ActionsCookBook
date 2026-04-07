@@ -3,8 +3,10 @@ name: My First WorkFlow
 on: 
   push: 
     branches: 
+      - 'main'
       - 'release/**' # Added space after dash
     paths: 
+      - 'ActionsCookBook/.github/workflows'
       - 'docs/**'    # Added space after dash
 
 jobs:
