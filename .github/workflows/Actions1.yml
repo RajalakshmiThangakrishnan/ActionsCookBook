@@ -1,11 +1,10 @@
-# My First WorkFlow
 name: My First WorkFlow
+
 on: 
   push: 
     branches: 
       - 'main'
-    paths: 
-      - 'ActionsCookBook/.github/workflows'
+  workflow_dispatch: # <--- ADD THIS LINE to see the "Run workflow" button
 
 jobs:
   first_job:         
@@ -19,8 +18,9 @@ jobs:
         shell: bash
 
       - name: Checkout 
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.2 # Note: v4 is the current stable version
 
       - name: Run Tree 
-        run: tree
-  
+        run: |
+          sudo apt-get install -y tree
+          tree
