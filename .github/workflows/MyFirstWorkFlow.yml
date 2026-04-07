@@ -7,7 +7,6 @@ on:
       - 'release/**' # Added space after dash
     paths: 
       - 'ActionsCookBook/.github/workflows'
-      - 'docs/**'    # Added space after dash
 
 jobs:
   first_job:         
